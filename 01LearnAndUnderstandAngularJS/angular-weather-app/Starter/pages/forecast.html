@@ -1,0 +1,11 @@
+Forecast for {{city}}
+
+<div class="btn btn-group"> <a href="#/forecast/2" class="btn btn-default" ng-class="{'bg-primary': days === 2}">2 days</a> <a href="#/forecast/5" class="btn btn-default" ng-class="{'bg-primary': days === 7}">5 days</a> <a href="#/forecast/7" class="btn btn-default" ng-class="{'bg-primary': days === 7}">7 days</a> <a href="#/forecast/10"  class="btn btn-default" ng-class="{'bg-primary': days === 10}">10 days</a> </div>
+
+<div ng-repeat="weatherResult in weatherReport.list">
+    <div class="row">
+        <div class="col-md-12">
+            <weather-result weather-result-data="weatherResult" convert-temp-standard="kToC(dayTemp)" convert-date-standard="readableDate(machineDate)" date-format="MMM d, y"></weather-result>
+        </div>
+    </div>
+</div>
